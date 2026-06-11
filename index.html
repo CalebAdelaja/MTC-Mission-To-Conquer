@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTC - Mission To Conquer</title>
+    <link rel="icon" href="images/logomtc.jpeg" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Barlow Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Inter Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="images/logomtc.jpeg" alt="MTC Logo" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <p class="white">MISSION TO</p>
+                    <p class="orange">CONQUER</p>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#members">Members</a>
+                <a href="#events">Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="heroSection">
+        <div class="hero-slider">
+            <div class="slides" id="heroSlides">
+                <!-- SLIDE 1 -->
+                <div class="hero-slide" data-image="https://images.unsplash.com/photo-1758691737538-220c1902b1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600">
+                    <div class="hero-content">
+                        <p class="tagline">Mission To Conquer</p>
+                        <h1>CONQUER <br> TOGETHER</h1>
+                        <p class="hero-quote">Build your network. Transform your future.</p>
+
+                        <div class="hero-buttons">
+                            <a class="btn-orange" href="#members">Join MTC</a>
+                            <a class="btn-outline" href="#members">Our Team</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDE 2 -->
+                <div class="hero-slide" data-image="https://images.unsplash.com/photo-1758873268933-e0765262e58d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600">
+                    <div class="hero-content">
+                        <p class="tagline">Mission To Conquer</p>
+                        <h1>RISE TO THE TOP</h1>
+                        <p class="hero-quote">Every great leader started exactly where you are</p>
+
+                        <div class="hero-buttons">
+                            <a class="btn-orange" href="#members">Join MTC</a>
+                            <a class="btn-outline" href="#members">Our Team</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- SLIDE 3 -->
+                <div class="hero-slide" data-image="https://images.unsplash.com/photo-1758691737492-48e8fdd336f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600">
+                    <div class="hero-content">
+                        <p class="tagline">Mission To Conquer</p>
+                        <h1>YOUR MISSION <br> STARTS NOW</h1>
+                        <p class="hero-quote">Join the movement. Claim your rank. Lead your teams</p>
+
+                        <div class="hero-buttons">
+                            <a class="btn-orange" href="#members">Join MTC</a>
+                            <a class="btn-outline" href="#members">Our Team</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="prevbtn" aria-label="Previous slide">&#10094</button>
+            <button class="nextbtn" aria-label="Next slide">&#10095</button>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+        
+    </section>
+
+    <section id="leadership" class="section">
+
+        <div class="leader-intro">
+            <div class="dash"></div>
+            <h3>Leadership</h3>
+        </div>
+
+        <h2 class="behind-mission">THE FACES BEHIND <br> <span>THE MISSION</span></h2>
+
+        <div class="leadership-grid">
+            <div class="leader-card" data-aos="fade-right">
+                <div class="leader-image">
+                    <!-- https://images.unsplash.com/photo-1560250097-0b93528c311a -->
+                    <img src="images/TeamLeader.jpeg" alt="MR Miracle">
+                    <div class="image-overlay"></div>
+                    <div class="leader-text-overlay">
+                        <p class="rank">QUALIFY EMERALD DIRECTOR</p>
+                        <h3>MR MIRACLE OLUWAFEMI</h3>
+                        <p class="quote">"Success is a team sport. We rise together."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assistants">
+                <div class="assistant-card" data-aos="fade-left">
+                    <div class="assistant-image" data-aos="fade-left">
+                        <img src="images/leader Pic.jpeg" />
+                        <div class="image-overlay"></div>
+                        <div class="assistant-text-overlay">
+                            <span class="senior-manager">SENIOR MANAGER</span>
+                            <p class="assistant-name">Temenu Victor</p>
+                            <p class="role">Asst. Team Leader 1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assistant-card" data-aos="fade-left">
+                    <div class="assistant-image" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1676989880361-091e12efc056" />
+                        <div class="image-overlay"></div>
+                        <div class="assistant-text-overlay">
+                            <span class="manager">MANAGER</span>
+                            <p class="assistant-name">Michael Eze</p>
+                            <p class="role">Asst. Team Leader 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="members" class="section dark">
+
+        <div class="leader-intro">
+            <div class="dash"></div>
+            <h3>Our Members</h3>
+        </div>
+
+        <h2>THE MTC MEMBERS</h2>
+
+        <div class="members-controls">
+
+            <select id="rankFilter">
+                <option value="ALLMEMBERS" selected>All MEMBERS</option>
+                <!-- <option value="ALLPROS">ALL PROS</option> -->
+                <option value="DISTRIBUTOR">DISTRIBUTOR</option>
+                <option value="MANAGER">MANAGER</option>
+                <option value="SENIOR MANAGER">SENIOR MANAGER</option>
+                <option value="EXECUTIVE MANAGER">EXECUTIVE MANAGER</option>
+                <option value="NEWBIE">NEWBIES</option>
+            </select>
+
+            <button id="openMemberModal">
+                JOIN MTC
+            </button>
+
+        </div>
+
+        <div id="membersGrid" class="grid" data-aos="fade-up"></div>
+    </section>
+
+    <div class="modal-overlay hidden" id="memberModal">
+        <div class="modal">
+            <button type="button" class="modal-close" id="closeMemberModal">×</button>
+            <h2>JOIN MTC</h2>
+
+            <div class="join-upload-row">
+                <div class="join-photo-preview">
+                    <div class="photo-placeholder">👤</div>
+                </div>
+
+                <label for="memberPhoto" class="join-upload-block">
+                    <button type="button" class="btn-upload-photo" id="upload-photo-btn">Upload Photo</button>
+                    <p class="upload-hint">JPG, PNG — optional</p>
+                    <input type="file" id="memberPhoto" accept="image/*" hidden>
+                </label>
+            </div>
+
+            <form id="memberForm">
+                <div class="form-row">
+                    <label for="memberName">FULL NAME *</label>
+                    <input type="text" id="memberName" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="memberStatus">STATUS *</label>
+                    <select id="memberStatus" name="status" required>
+                        <option value="NEWBIE">NEWBIE</option>
+                        <option value="DISTRIBUTOR">DISTRIBUTOR</option>
+                        <option value="MANAGER">MANAGER</option>
+                        <option value="SENIOR MANAGER">SENIOR MANAGER</option>
+                        <option value="EXECUTIVE MANAGER">EXECUTIVE MANAGER</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="sponsorName">SPONSOR NAME *</label>
+                    <input type="text" id="sponsorName" name="sponsor" placeholder="Who sponsored you?" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="uplineName">UPLINE NAME *</label>
+                    <input type="text" id="uplineName" name="upline" placeholder="Who is your upline?" required>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelMemberBtn">CANCEL</button>
+                    <button type="submit" class="btn-submit">ADD TO MTC</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <section id="events" class="section">
+        <div class="event-container">
+            <div class="leader-intro">
+                <div class="dash"></div>
+                <h3>Upcoming Events</h3>
+            </div>
+
+            <div class="events-header">
+                <h2>UPCOMING EVENTS</h2>
+
+                <button id="openEventModal" class="add-event-btn">
+                    <i class="fa-solid fa-plus"></i>ADD EVENT
+                </button>
+            </div>
+
+            <div id="eventsGrid" class="grid" data-aos="fade-up"></div>
+        </div>
+        
+    </section>
+
+    <div class="modal-overlay hidden" id="eventModal">
+        <div class="modal">
+            <button type="button" class="modal-close" id="closeEventModal">×</button>
+            <h2>ADD EVENT</h2>
+
+            <label for="eventFlyer" class="upload-box" id="eventFlyerLabel">
+                <span class="upload-icon">📷</span>
+                <span id="flyer-text">Upload event flyer</span>
+                <input type="file" id="eventFlyer" accept="image/*" hidden>
+            </label>
+
+            <form id="eventForm">
+                <div class="form-row">
+                    <label for="eventTitle">EVENT TITLE *</label>
+                    <input type="text" id="eventTitle" name="title" placeholder="e.g. Monthly Cheque Rally" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="eventDate">DATE *</label>
+                    <input type="date" id="eventDate" name="date" placeholder="mm/dd/yyyy" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="eventVenue">VENUE *</label>
+                    <input type="text" id="eventVenue" name="venue" placeholder="Location / address" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="eventDescription">DESCRIPTION</label>
+                    <textarea id="eventDescription" name="description" placeholder="Tell people what to expect..."></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelEventBtn">CANCEL</button>
+                    <button type="submit" class="btn-submit">PUBLISH EVENT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="white-footer">MISSION TO</p>
+            <p class="orange-footer">CONQUER</p>
+        </div>
+
+        <div class="social-medials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+        <small>© 2026 MTC · All rights reserved</small>
+        <small>Together We Conquer</small>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b2618eae9a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
