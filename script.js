@@ -1,5 +1,13 @@
-// HERO BANNER SLIDER
+"use strict"
+/* HAMBURGER MENU */
+const hamMenu = document.getElementById("ham-menu")
+const navLinks = document.querySelector(".nav-links")
+hamMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active")
+    hamMenu.classList.toggle("active")
+})
 
+// HERO BANNER SLIDER
 let heroSlides = [];
 console.log(heroSlides)
 let heroPrevBtn = undefined;
@@ -38,24 +46,127 @@ function heroInit() {
 
 function heroCreateDots() { 
     heroSlides.forEach((curr, i) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
+        /* heroSlides is an array that contains all your slides.
+
+        Example:
+        heroSlides = [slide1, slide2, slide3]
+
+        So this forEach means:
+        Go through every slide one by one and do something for each one */
+        const dot = document.createElement('div');//Here i created a new div
+        /* For every single slide, we are creating a NEW dot.
+
+            Important idea:
+            - This is NOT using existing HTML dots
+            - We are building dots dynamically using JavaScript
+
+            So every loop creates something like:
+            <div></div> */
+        dot.classList.add('dot');// Give the Created div a class name
+        /* We give the dot a class name called "dot"
+
+            Why?
+            Because CSS uses this class to:
+            - make it round
+            - set size
+            - set color
+            - add spacing
+
+            So this turns:
+            <div></div>
+
+            into:
+            <div class="dot"></div> */
         if (i === 0) dot.classList.add('active');
+        /*  This line means:
+
+            "If this is the FIRST slide (index 0),
+             then make its dot active when the page loads"
+
+            Why only i === 0?
+
+            Because when the slider starts:
+            - slide 0 is visible first
+            - so its dot should also look active
+
+            So only this one becomes:
+            <div class="dot active"></div>
+
+            Others remain:
+            <div class="dot"></div> */
         dot.addEventListener('click', () => heroShowSlide(i));
+        /* This makes each dot clickable.
+
+            When you click a dot:
+            - it calls heroShowSlide(i)
+
+            That means:
+            "Go to the slide that matches this dot"
+
+            Example:
+            If i = 2, clicking this dot will do:
+            heroShowSlide(2)
+
+            So it jumps to slide 3 (because index starts from 0) */
         heroDotsContainer.appendChild(dot);
+        /* This is the moment the dot actually appears on the screen.
+
+            Without this line:
+            - dot exists in memory only
+            - user will NOT see it
+
+            With this line:
+            - dot is inserted into the HTML container
+
+            So after running 3 times, HTML becomes:
+
+            <div id="sliderDots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div> */
     });
 }
 
 function heroAddEventListeners() {
     heroPrevBtn.addEventListener('click', heroPrevSlide);
+    /* Connect the Previous button to the function
+        that moves the slider backward.
+
+        When the user clicks the Previous button,
+        heroPrevSlide() will run. */
     heroNextBtn.addEventListener('click', heroNextSlide);
+    /* Connect the Next button to the function
+        that moves the slider forward.
+
+        When the user clicks the Next button,
+        heroNextSlide() will run. */
 
     const heroSliderEl = document.querySelector('.hero-slider');
+    /* Get the main slider container so we can
+        listen for mouse events on it. */
     heroSliderEl.addEventListener('mouseenter', heroStopAutoPlay);
+    /*  When the mouse enters the slider area,
+        pause the automatic slide movement.
+
+        This gives the user time to read content
+        without the slide changing. */
     heroSliderEl.addEventListener('mouseleave', heroStartAutoPlay);
+    /* When the mouse leaves the slider area,
+        restart automatic slide movement. */
 }
 
 function heroShowSlide(index) {
+    /* Show only the slide whose index was passed in.
+
+    Process:
+
+    1. Remove active class from all slides.
+    2. Remove active class from all dots.
+    3. Add active class to the selected slide.
+    4. Add active class to the matching dot.
+    5. Update heroCurrentSlide so the slider knows which slide is currently visible. */
+    console.log(index)
     heroSlides.forEach((slide) => slide.classList.remove('active'));
     document.querySelectorAll('.dot').forEach((dot) => dot.classList.remove('active'));
 
@@ -66,6 +177,7 @@ function heroShowSlide(index) {
 
 function heroNextSlide() {
     const nextIndex = (heroCurrentSlide + 1) % heroSlides.length;
+    console.log(nextIndex)
     heroShowSlide(nextIndex);
 }
 
@@ -452,34 +564,3 @@ rankFilter.addEventListener("change", () => {
     displayMembers(filteredMembers)
 })
 
-/* I want do something that the description on the 
-
-    REYA is a holistic healing space for women ready to reconnect with their bodies, reclaim their energy, and live in alignment. I designed a calming, intuitive Squarespace website that reflects their nurturing approach while clearly outlining their offerings.
-
-For this project, I created a modern, user-friendly website for a talented hair stylist and makeup artist known for delivering flawless beauty experiences. My goal was to design a site that captures the client’s unique style, creativity, and dedication to enhancing natural beauty.
-
-
-Did you remembered how we did the portfolio yesterday right?
-
-this is the image of the portfolio i wan to add 
-
-please can you the image very very well and according to that image use that to form:
-
-Project title 
-Your role
-project description
-Skills and deliverables
-
-
-
-there's a format i would like you to use in writing the project description for me
-
-REYA is a holistic healing space for women ready to reconnect with their bodies, reclaim their energy, and live in alignment. I designed a calming, intuitive Squarespace website that reflects their nurturing approach while clearly outlining their offerings.
-
-Use like the way to make my project description 
-
-write a "Results" section or a brief "Challenge & Solution" paragraph to add more depth to this project? 
-Always the project decription be in 50words 
-
-Not because i give you a format that start with "For this project," that's why you  write For this project, in all the description you gave can't you change i gave you that description to know how you will generate a good looking project description for  me not to copy
-*/
