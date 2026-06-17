@@ -1,36 +1,42 @@
 "use strict"
 /* HAMBURGER MENU */
-const hamMenu = document.getElementById("ham-menu")
 const navLinks = document.querySelector(".nav-links")
-hamMenu.addEventListener("click", () => {
-    navLinks.classList.toggle("active")
-    hamMenu.classList.toggle("active")
-})
+const hamburger = document.querySelector(".hamburger")
+
+if (hamburger && navLinks) {
+    const setMenuOpen = (isOpen) => {
+        navLinks.classList.toggle("active", isOpen)
+        hamburger.classList.toggle("active", isOpen)
+        document.body.classList.toggle("menu-open", isOpen)
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
+    }
+
+    hamburger.addEventListener("click", () => {
+        setMenuOpen(!navLinks.classList.contains("active"))
+    })
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false))
+    })
+}
 
 // HERO BANNER SLIDER
 let heroSlides = [];
-console.log(heroSlides)
 let heroPrevBtn = undefined;
-console.log(heroPrevBtn)
 let heroNextBtn = undefined;
-console.log(heroNextBtn)
 let heroDotsContainer = null;
 let heroCurrentSlide = 0;
 let heroAutoPlayInterval = null;
 
 function heroInit() {
     heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
-    console.log(heroSlides)
     heroPrevBtn = document.querySelector('.prevbtn');
-    // console.log(heroPrevBtn.textContent)
     heroNextBtn = document.querySelector('.nextbtn');
-    // console.log(heroNextBtn.textContent)
     heroDotsContainer = document.getElementById('sliderDots');
-    // console.log(heroDotsContainer)
+
 
     heroSlides.forEach((slide) => {
         const imageUrl = slide.getAttribute('data-image');
-        console.log(imageUrl)
         // if (imageUrl) slide.style.backgroundImage = `url("${imageUrl}")`;
         if (imageUrl) {
             slide.style.backgroundImage = `url("${imageUrl}")`;
@@ -166,7 +172,6 @@ function heroShowSlide(index) {
     3. Add active class to the selected slide.
     4. Add active class to the matching dot.
     5. Update heroCurrentSlide so the slider knows which slide is currently visible. */
-    console.log(index)
     heroSlides.forEach((slide) => slide.classList.remove('active'));
     document.querySelectorAll('.dot').forEach((dot) => dot.classList.remove('active'));
 
@@ -177,7 +182,6 @@ function heroShowSlide(index) {
 
 function heroNextSlide() {
     const nextIndex = (heroCurrentSlide + 1) % heroSlides.length;
-    console.log(nextIndex)
     heroShowSlide(nextIndex);
 }
 
