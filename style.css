@@ -477,11 +477,12 @@ svg {
     align-self: flex-start;
     display: inline-flex;
     background: #a855f766;
-    border: 1px solid #a855f780;
+    /* border: 1px solid #a855f780; */
     padding: 4px 8px;
     letter-spacing: 2px;
     font-size: 1rem;
-    color: #a855f7;
+    color: #4e0a8e;
+    font-weight: 700;
     padding: 4px 8px;
     margin-bottom: 8px;
 }
@@ -490,11 +491,11 @@ svg {
     align-self: flex-start;
     display: inline-flex;
     background: #3B82F666;
-    border: 1px solid #3B82F680;
+    /* border: 1px solid #3B82F680; */
     padding: 4px 8px;
     letter-spacing: 2px;
     font-size: 1rem;
-    color: #3B82F6;
+    color: #093b89;
     border-color: transparent;
     padding: 4px 8px;
     margin-bottom: 8px;
@@ -1148,7 +1149,7 @@ body.menu-open {
         max-width: 100%;
         height: auto;
         max-height: 280px;
-        padding-top: 60px; /* small gap for header height */
+        padding-top: 60px; 
         background-color: rgba(10,10,10,0.98);
         flex-direction: column;
         justify-content: flex-start;
