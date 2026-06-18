@@ -12,7 +12,7 @@ function updateNavPadding() {
             document.body.style.paddingTop = `0px`
         } else {
             document.body.style.paddingTop = `${navbar.offsetHeight}px`
-        }vc 
+        }
     }
 }
 
