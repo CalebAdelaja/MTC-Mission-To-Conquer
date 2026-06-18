@@ -45,7 +45,7 @@
     }
 
     body {
-        padding-top: 72px;
+        /* padding-top: 72px; */
     }
 
     .navbar,
@@ -76,8 +76,8 @@
     }
 
     .hero {
-        height: 85vh;
-        min-height: 85vh;
+        height: 100vh;
+        min-height: 100vh;
     }
 
     .hero-slider,
@@ -248,7 +248,7 @@
 /* ── Small phones ── */
 @media (max-width: 480px) {
     body {
-        padding-top: 68px;
+        /* padding-top: 68px; */
     }
 
     .nav-container {
