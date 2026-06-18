@@ -2,50 +2,22 @@
 /* HAMBURGER MENU */
 const navLinks = document.querySelector(".nav-links")
 const hamburger = document.querySelector(".hamburger")
-const navbar = document.querySelector(".navbar")
-const MENU_TRANSITION_MS = 400
 
-function updateNavPadding() {
-    if (navbar) {
-        // Don't add padding when mobile menu is open — menu should overlay content
-        if (document.body.classList.contains('menu-open')) {
-            document.body.style.paddingTop = `0px`
-        } else {
-            document.body.style.paddingTop = `${navbar.offsetHeight}px`
-        }
-    }
-}
-
-if (hamburger && navLinks && navbar) {
+if (hamburger && navLinks) {
     const setMenuOpen = (isOpen) => {
-        navLinks.classList.toggle("active", isOpen)
-        hamburger.classList.toggle("active", isOpen)
+        navLinks.classList.toggle("active")
+        hamburger.classList.toggle("active")
         document.body.classList.toggle("menu-open", isOpen)
-        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
-        requestAnimationFrame(updateNavPadding)
-        setTimeout(updateNavPadding, MENU_TRANSITION_MS)
+        // hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
     }
 
     hamburger.addEventListener("click", () => {
         setMenuOpen(!navLinks.classList.contains("active"))
-    })
+    })  
 
     navLinks.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => setMenuOpen(false))
     })
-
-    navLinks.addEventListener("transitionend", (event) => {
-        if (event.propertyName === "max-height") {
-            updateNavPadding()
-        }
-    })
-
-    if (window.ResizeObserver) {
-        new ResizeObserver(updateNavPadding).observe(navbar)
-    }
-
-    window.addEventListener("resize", updateNavPadding)
-    updateNavPadding()
 }
 
 // HERO BANNER SLIDER
