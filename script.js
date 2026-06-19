@@ -286,7 +286,7 @@ const events = [
 
 const membersGrid = document.getElementById('membersGrid');
 const eventsGrid = document.getElementById('eventsGrid');
-const rankFilter = document.getElementById("rankFilter")
+const rankFilter = document.getElementById("rankFilter");
 
 function displayMembers(members) { // why did we use function here instead of const or let? Using a function allows us to define a reusable block of code that can be called with different sets of members. If we used const or let, we would be defining a variable that holds a specific value, which would not allow for the same level of flexibility and reusability as a function. By using a function, we can easily update the display of members whenever the data changes without having to rewrite the code that generates the member cards.
     membersGrid.innerHTML = '';//This is to clear the existing content in the html element before adding new content with the forEach loop. This ensures that when you call displayMembers multiple times, it doesn't keep appending new member cards to the existing ones, but instead replaces the old content with the new one.
