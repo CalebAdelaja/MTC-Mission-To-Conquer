@@ -469,6 +469,7 @@ svg {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #f59e0b;
+    font-weight: 700;
     border: 1px solid #f59e0b80;
     margin-bottom: 8px;
 }
