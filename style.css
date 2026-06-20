@@ -36,7 +36,7 @@ svg {
     z-index: 1100;
     background: rgba(10,10,10,0.95);
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .nav-container {
@@ -1123,7 +1123,7 @@ body.menu-open {
 
 @media (max-width: 768px) {
     .navbar {
-        overflow: hidden;
+        /* overflow: hidden; */
         position: fixed;
         z-index: 2000;
     }
@@ -1160,7 +1160,7 @@ body.menu-open {
         z-index: 1000;
         overflow-y: auto;
         overflow-x: hidden;
-        animation: comedown 0.5s ease-in;
+        /* animation: comedown 0.5s ease-in; */
     }
 
     .nav-links a {
