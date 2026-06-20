@@ -5,8 +5,8 @@ const hamburger = document.querySelector(".hamburger")
 
 if (hamburger && navLinks) {
     const setMenuOpen = (isOpen) => {
-        navLinks.classList.toggle("active")
-        hamburger.classList.toggle("active")
+        navLinks.classList.toggle("active", isOpen)
+        hamburger.classList.toggle("active", isOpen)
         document.body.classList.toggle("menu-open", isOpen)
         hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
     }
