@@ -8,7 +8,7 @@ if (hamburger && navLinks) {
         navLinks.classList.toggle("active")
         hamburger.classList.toggle("active")
         document.body.classList.toggle("menu-open", isOpen)
-        // hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false")
     }
 
     hamburger.addEventListener("click", () => {
