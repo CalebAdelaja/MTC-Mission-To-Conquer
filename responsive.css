@@ -45,7 +45,7 @@
     }
 
     body {
-        /* padding-top: 72px; */
+        padding-top: 72px;
     }
 
     .navbar,
@@ -248,7 +248,7 @@
 /* ── Small phones ── */
 @media (max-width: 480px) {
     body {
-        /* padding-top: 68px; */
+        padding-top: 68px;
     }
 
     .nav-container {
