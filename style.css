@@ -354,7 +354,7 @@ svg {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     gap: 20px;
     width: 100%;
 }
@@ -829,7 +829,7 @@ svg {
     justify-content: center;
     background: #181818;
     color: #fff;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 800;
 }
 
@@ -846,9 +846,9 @@ svg {
     justify-content: center;
     background: rgba(232,69,26,0.15);
     color: #E8451A;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.75rem;
+    padding: 5px 10px;
+    font-family: 'Barlow Condensed';
+    font-size: 0.985rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     width: fit-content;

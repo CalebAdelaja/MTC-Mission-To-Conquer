@@ -296,17 +296,52 @@ function displayMembers(members) { // why did we use function here instead of co
         // const memberImage = member.picture
         //     ? `<img src="${member.picture}" alt="${member.fullName}" class="member-image">`
         //     : `<div class="member-placeholder">${member.fullName.charAt(0)}</div>`;
+
+        const rankStyle = {
+            "EXECUTIVE MANAGER": {
+                color: "#F59E0B",
+                background: "#f59e0b66",
+                border: "#FFD700"
+            },
+            "SENIOR MANAGER": {
+                color : "#A855F7",
+                background: "#a855f766",
+                border: "#A855F7"
+            },
+            MANAGER: {
+                color: "#3B82F6",
+                background: "#3B82F666",
+                border: "#3B82F6"
+            },
+
+            DISTRIBUTOR: {
+                color: "#10B981",
+                background: "#10b98126",
+                border: "#10B981"
+            },
+            NEWBIE: {
+                color: "#6B7280",
+                background: "#6b728026",
+                border: "#6B7280"
+            }
+        } 
+        const statusStyle = rankStyle[member.status] || rankStyle["NEWBIE"]
+
         let memberImage;
         if (member.picture) {
             memberImage = `<img src="${member.picture}" alt="${member.fullName}" class="member-image">`
         } else {
-            memberImage = `<div class="member-placeholder">${member.fullName.charAt(0)}</div>`;
+            memberImage = `<div class="member-placeholder" style="color:${statusStyle.color}">${member.fullName.charAt(0)}</div>`;
         }
 
         memberCard.innerHTML = `
             ${memberImage}
             <div class="member-card-body">
-                <span class="member-status">${member.status}</span>
+                <span class="member-status" style= "
+                background: ${statusStyle.background};
+                color: ${statusStyle.color};
+                border: 1px  ${statusStyle.border} solid;
+                ">${member.status}</span>
                 <h3 class="member-name">${member.fullName}</h3>
                 <p class="member-detail"><span>Sponsor:</span> ${member.sponsorName}</p>
                 <p class="member-detail"><span>Upline:</span> ${member.uplineName}</p>
@@ -565,6 +600,4 @@ rankFilter.addEventListener("change", () => {
     }else{
         filteredMembers = members.filter((memberfilter) => memberfilter.status === selectedRank)
     }
-    displayMembers(filteredMembers)
 })
-
